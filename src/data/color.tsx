@@ -1,0 +1,18 @@
+export const colorByType = {
+    def: "#c4c4c4",
+    fighting: "#ebad1e",
+    flying: "#ffda85",
+    poison: "#8b1be0",
+    bug: "#27800e",
+    ghost: "#330085",
+    fire: "#fa8225",
+    water: "#56b2e8",
+    grass: "#a5ed66",
+    electric: "#e8da17",
+    psychic: "#f090e6",
+    ice: "#85d2ff",
+    dragon: "#e86f6f",
+    dark: "#00484f",
+    fairy: "#ffb8ee",
+    shadow: "#292929",
+};

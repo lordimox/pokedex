@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --primary: #FFA030;
+    --over-primary: #FFF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+.pokedex-layout {
+    width: 100%;
+    max-width: 100vw;
+    background-image: url("/pokedex-bg.jpg");
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.pokedex-wrapper {
+    max-width: 1080px;
+    background-image: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%, rgba(255,255,255,0) 100%);
+    margin: 0px auto;
+    padding: 120px 120px 0px 120px;
+    min-height: 100vh;
+}
+
+.search-bar {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    height: 32px;
+    width: 80%;
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+}
+
+.search-input {
+    border: none;
+    border-radius: 16px 0px 0px 16px;
+    padding-left: 16px;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-button {
+    border: none;
+    border-radius: 0px 16px 16px 0px;
+    padding-right: 8px;
+    background-color: var(--primary);
+    color: var(--over-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mt-32 {
+    margin-top: 32px;
+}
+
+.pb-32 {
+    padding-bottom: 32px;
+}
+
+.poke-card {
+    border-radius: 16px;
+    min-width: 180px;
+    max-width: 250px;
+}
+
+.poke-card-border {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    background-image: linear-gradient(#808080 0%, #FFF 50%, #808080 100%);
+    border-radius: 16px;
+}
+
+.poke-card-wrap {
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.poke-card-name {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.poke-card-tdata {
+    display: flex;
+    align-items: flex-end;
+}
+
+.poke-card-stat {
+    font-weight: 700;
+    font-size: 0.5rem;
+}
+
+.poke-card-num {
+    font-size: 1rem;
+    margin: 0px 4px;
+}
+
+.poke-card-type {
+    padding: 1px;
+    border: 0.5px solid black;
+    background-color: white;
+    align-self: flex-start;
+}
+
+.poke-card-type h5 {
+    font-size: 0.6rem;
+}
+
+.poke-card-image {
+    width: calc(100% - 20px);
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.poke-card-image-footer {
+    width: 100%;
+    background-image: linear-gradient(#CACACA 0%, #FFF 50%, #CACACA 100%);
+    height: 0.8rem;
+    border-radius: 0.4rem;
+}
+
+.poke-card-image-footer span {
+    font-size: 0.5rem;
+}
+
+.poke-card-abwrap {
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.poke-card-ab {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.poke-card-ab p {
+    font-size: 0.8rem;
+}
+
+.poke-card-button {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    background-color: var(--primary);
+    color: var(--over-primary);
+    border-radius: 16px;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.skeleton-animation {
+    width: 100%;
+    height: 18px;
+    border-radius: 2px;
+    animation: skeleton-bg 2s;
+}
+
+.mask-bg {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poke-card.card-static {
+    width: 250px;
+}
+
+/** DISPLAY CLASSES **/
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-row-spaceb {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-3col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+.grid-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+}
+
+@keyframes skeleton-bg {
+    0% {background-image: linear-gradient("#808080" 0%, "#c4c4c4" 50%, "#808080" 100%);}
+    50% { background-image: linear-gradient("#c4c4c4" 0%, "#808080" 50%, "#808080" 100%);}
+    100% {background-image: linear-gradient("#808080" 0%, "#c4c4c4" 50%, "#808080" 100%);}
+}
